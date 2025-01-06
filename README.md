@@ -2,7 +2,7 @@
 
 [![DOI](https://img.shields.io/badge/DOI-10.1145%2F3672608.3707833-1a7f8c)](https://doi.org/10.1145/3672608.3707833)
 [![arXiv](https://img.shields.io/badge/arXiv-2501.07828-b31b1b)](https://arxiv.org/abs/2501.07828)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Thanos002/IL_Measurement/blob/main/notebooks/IL_Data_Extraction.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ThanosDrossos/IL_Measurement/blob/main/notebooks/IL_Data_Extraction.ipynb)
 
 Code and data behind **"Automated Market Makers: Toward More Profitable
 Liquidity Provisioning Strategies"** (SAC '25) and the underlying thesis by

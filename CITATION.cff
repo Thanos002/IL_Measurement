@@ -11,7 +11,7 @@ authors:
     given-names: Thanos
     affiliation: "Karlsruhe Institute of Technology"
 license: MIT
-repository-code: "https://github.com/Thanos002/IL_Measurement"
+repository-code: "https://github.com/ThanosDrossos/IL_Measurement"
 preferred-citation:
   type: conference-paper
   title: "Automated Market Makers: Toward More Profitable Liquidity Provisioning Strategies"
