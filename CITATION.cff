@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this code or the datasets, please cite the paper below."
+title: "IL_Measurement: A Measurement Model for Impermanent Loss in Uniswap v3"
+abstract: >-
+  Code and data for a measurement model that reconstructs individual Uniswap v3
+  liquidity positions from on-chain snapshots and decomposes their realised
+  outcome into impermanent loss and collected fees, covering 30,058 closed
+  position observations across nine pools.
+authors:
+  - family-names: Drossos
+    given-names: Thanos
+    affiliation: "Karlsruhe Institute of Technology"
+license: MIT
+repository-code: "https://github.com/Thanos002/IL_Measurement"
+preferred-citation:
+  type: conference-paper
+  title: "Automated Market Makers: Toward More Profitable Liquidity Provisioning Strategies"
+  authors:
+    - family-names: Drossos
+      given-names: Thanos
+      affiliation: "Karlsruhe Institute of Technology"
+    - family-names: Kirste
+      given-names: Daniel
+      affiliation: "Technical University of Munich"
+    - family-names: Kannengießer
+      given-names: Niclas
+      affiliation: "Karlsruhe Institute of Technology"
+    - family-names: Sunyaev
+      given-names: Ali
+      affiliation: "Technical University of Munich"
+  collection-title: "Proceedings of the 40th ACM/SIGAPP Symposium on Applied Computing (SAC '25)"
+  conference:
+    name: "40th ACM/SIGAPP Symposium on Applied Computing"
+    city: Catania
+    country: IT
+  publisher:
+    name: "Association for Computing Machinery"
+  year: 2025
+  doi: "10.1145/3672608.3707833"
+  url: "https://arxiv.org/abs/2501.07828"

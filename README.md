@@ -1,16 +1,41 @@
 # A Measurement Model for Impermanent Loss in Uniswap v3
 
+[![DOI](https://img.shields.io/badge/DOI-10.1145%2F3672608.3707833-1a7f8c)](https://doi.org/10.1145/3672608.3707833)
+[![arXiv](https://img.shields.io/badge/arXiv-2501.07828-b31b1b)](https://arxiv.org/abs/2501.07828)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Thanos002/IL_Measurement/blob/main/notebooks/IL_Data_Extraction.ipynb)
 
-Code and data for the thesis *A Measurement Model for Impermanent Loss in
-Uniswap v3* by Thanos Drossos (KIT).
+Code and data behind **"Automated Market Makers: Toward More Profitable
+Liquidity Provisioning Strategies"** (SAC '25) and the underlying thesis by
+Thanos Drossos (KIT).
 
 The project measures the realised performance of individual Uniswap v3
 liquidity positions: it reconstructs each position from on-chain snapshots,
 values it at mint and at burn, and decomposes the outcome into impermanent
 loss (IL) and collected fees. The result is a dataset of **30,058 closed
-position observations across 9 pools** between 1 May 2022 and 1 April 2024,
-plus the figures and tables used in the thesis.
+position observations across 9 pools** between 1 May 2022 and 1 April 2024 —
+roughly 700 days — plus the figures and tables the paper and thesis report.
+
+## Paper
+
+> Thanos Drossos, Daniel Kirste, Niclas Kannengießer, and Ali Sunyaev. 2025.
+> Automated Market Makers: Toward More Profitable Liquidity Provisioning
+> Strategies. In *Proceedings of the 40th ACM/SIGAPP Symposium on Applied
+> Computing* (SAC '25), Catania, Italy. Association for Computing Machinery.
+
+- Published version: <https://dl.acm.org/doi/abs/10.1145/3672608.3707833>
+- Preprint: <https://arxiv.org/abs/2501.07828>
+
+The paper examines how four parameters of a liquidity provisioning strategy
+influence a provider's return. Each maps onto this dataset as follows:
+
+| Parameter in the paper | Where it lives in the data |
+| --- | --- |
+| Liquidity pool type | Pool category — stable/stable, stable/risky, risky/risky (see [Pools studied](#pools-studied)) |
+| Position duration | `weightedDurationSeconds`, plotted as `durationDays` |
+| Position range size | Derived from `price1_lower` and `price1_upper` |
+| Position size | `event_amountUSD` |
+
+See [data/README.md](data/README.md) for the definition of each column.
 
 ## Repository layout
 
@@ -102,6 +127,28 @@ steps contributes more than one row.
 | MKR/WETH | 1% | risky/risky | `0x3afdc5e6dfc0b0a507a8e023c9dce2cafc310316` | 87 |
 
 Observation window: blocks 14,691,320 to 19,560,244 (1 May 2022 to 1 April 2024).
+
+## Citation
+
+If you use this code or the datasets, please cite the paper:
+
+```bibtex
+@inproceedings{drossos2025amm,
+  author    = {Drossos, Thanos and Kirste, Daniel and Kannengie{\ss}er, Niclas
+               and Sunyaev, Ali},
+  title     = {Automated Market Makers: Toward More Profitable Liquidity
+               Provisioning Strategies},
+  booktitle = {Proceedings of the 40th ACM/SIGAPP Symposium on Applied
+               Computing (SAC '25)},
+  year      = {2025},
+  address   = {Catania, Italy},
+  publisher = {Association for Computing Machinery},
+  doi       = {10.1145/3672608.3707833}
+}
+```
+
+[CITATION.cff](CITATION.cff) carries the same metadata for GitHub's *Cite this
+repository* button.
 
 ## License
 
